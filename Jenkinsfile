@@ -4,7 +4,7 @@ pipeline {
     stage('Deploy') {
       steps {
         slackSend(color: 'good', message: 'Iniciando deploy')
-        ansiblePlaybook(playbook: '/Users/dennisavilesodar/Developer/practica/devops/produccion.yml', colorized: true, inventory: '/Users/dennisavilesodar/Developer/practica/devops/host')
+        ansiblePlaybook(playbook: '/Users/dennisavilesodar/Developer/practica/jenkins/data/jobs/devops/branches/master/workspace/produccion.yml', colorized: true, inventory: '/Users/dennisavilesodar/Developer/practica/jenkins/data/jobs/devops/branches/master/workspace/host')
       }
     }
 
